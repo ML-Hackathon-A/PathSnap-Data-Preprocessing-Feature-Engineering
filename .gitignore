@@ -1,0 +1,15 @@
+
+# Large combined training dataset
+PathSnap_All_Training_Features.csv
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Environment and secrets
+.env
+venv/
+.venv/
