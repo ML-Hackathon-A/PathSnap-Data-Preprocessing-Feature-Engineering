@@ -6,11 +6,18 @@ with Optuna), then HMM/Viterbi route decoding, a FastAPI backend (Laptop 1) and 
 
 ## Team
 
-The work was split across three people:
+The work was split equally across three people. Every stage of the project was divided, so each
+member contributed to preprocessing, feature engineering, modelling, optimisation, deployment and
+documentation.
 
-- Akshath Girish Shirolkar
-- Akshath Patil
-- Aditya Jaiswal
+| Stage | Akshath Girish Shirolkar | Akshath Patil | Aditya Jaiswal |
+|---|---|---|---|
+| Data preprocessing | Raw-data validation notebook: missing values, invalid coordinates/ids, duplicates (`notebooks/01_data_preprocessing.ipynb`) | Timestamp and route-connectivity checks, cleaning rules in the pipeline (`src/data_io.py`) | Exploratory data analysis: trip inventory, distributions, trajectory and network plots (`src/eda.py`) |
+| Feature engineering | Local metric projection, road-network model and KD-tree spatial index (`src/geo.py`) | Candidate generation and monotonic DP label alignment with the reference route (`src/features.py`) | The 21 per-candidate features and the dataset builder (`src/features.py`, `src/build_dataset.py`) |
+| Model training (5 models) | Logistic Regression and KNN | Random Forest and MLP | LightGBM, evaluation metrics and model comparison (`src/metrics.py`, `src/compare_models.py`) |
+| Optimisation and decoding | Bayesian hyperparameter optimisation with Optuna (`src/tune.py`) | HMM / Viterbi route reconstruction (`src/hmm.py`) | Decoder parameter tuning and final evaluator-test evaluation (`src/tune_decoder.py`, `src/evaluate_holdout.py`) |
+| Deployment | FastAPI backend and inference pipeline (`api/main.py`, `src/pipeline.py`) | Streamlit evaluator UI (`ui/app.py`) | Two-laptop start scripts, packaging and dependency setup (`start_*.ps1`, `tools/`, `requirements/`) |
+| Visualisation and documentation | Technical report sections 2-3 (EDA, model comparison) | Technical report sections 4-5 (optimisation, HMM) | Folium maps, report sections 6-7, README and viva guide (`src/make_map.py`, `report/`) |
 
 ## Folder layout
 
