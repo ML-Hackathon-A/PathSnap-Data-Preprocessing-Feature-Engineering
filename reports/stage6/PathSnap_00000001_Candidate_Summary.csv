@@ -1,0 +1,2 @@
+trip_id,total_gps_observations,observations_with_candidates,observations_without_candidates,total_candidate_pairs,average_candidates_per_observation,minimum_candidates_per_observation,median_candidates_per_observation,maximum_candidates_per_observation
+00000001,1315,1315,0,15964,12.14,2,10.0,80

@@ -1,0 +1,14 @@
+Validation Metric,Value
+total_trips,90
+total_gps_observations,227577
+total_road_nodes,2024174
+total_road_arcs,4061945
+total_route_entries,34813
+invalid_gps,0
+invalid_nodes,0
+invalid_arcs,0
+invalid_route_entries,0
+missing_values,0
+duplicate_gps,0
+non_increasing_timestamps,0
+disconnected_route_transitions,14

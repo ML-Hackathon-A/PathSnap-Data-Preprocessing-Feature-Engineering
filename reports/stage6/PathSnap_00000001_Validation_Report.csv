@@ -1,0 +1,7 @@
+trip_id,validation_check,status
+00000001,Column structure,PASSED
+00000001,GPS index validity,PASSED
+00000001,Candidate arc ID validity,PASSED
+00000001,Trip ID validity,FAILED
+00000001,Duplicate candidate pairs,PASSED
+00000001,Infinite feature values,PASSED
