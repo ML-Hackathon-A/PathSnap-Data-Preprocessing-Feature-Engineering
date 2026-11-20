@@ -1,0 +1,70 @@
+{
+  "run_id": "rf",
+  "model": "rf",
+  "family": "Ensemble (bagging)",
+  "tag": "base",
+  "params": {
+    "n_estimators": 300,
+    "min_samples_leaf": 5,
+    "max_features": "sqrt",
+    "max_depth": null
+  },
+  "seed": 42,
+  "features": [
+    "dist_m",
+    "dist_rank",
+    "dist_minus_min",
+    "dist_ratio",
+    "n_cands",
+    "dist_prev_m",
+    "dist_next_m",
+    "dist_window_mean",
+    "cos_heading",
+    "abs_heading_diff",
+    "cos_heading_long",
+    "speed_mps",
+    "heading_valid",
+    "arc_len",
+    "proj_frac",
+    "overhang_m",
+    "out_deg_end",
+    "in_deg_start",
+    "has_twin",
+    "dt_prev",
+    "is_fallback"
+  ],
+  "train_rows_used": 656538,
+  "cv_f1_macro_mean": 0.9082861076162914,
+  "cv_f1_macro_std": 0.04433084914032911,
+  "cv_top1_mean": 0.7615603129695829,
+  "cv_top1_labelled_mean": 0.8861488089435776,
+  "cv_log_loss_mean": 0.10887651467199914,
+  "cv_train_f1_macro_mean": 0.9679974696983036,
+  "train_time_s": 182.47468423843384,
+  "inference_time_s": 1.2382407188415527,
+  "inference_ms_per_obs": 0.06462634231949649,
+  "student_test": {
+    "accuracy": 0.970352438783906,
+    "precision_macro": 0.9432663202669982,
+    "recall_macro": 0.9233249333799471,
+    "f1_macro": 0.9329682517884548,
+    "f1_positive": 0.882909012783328,
+    "log_loss": 0.07552430125257391,
+    "confusion_matrix": [
+      [
+        126263,
+        1679
+      ],
+      [
+        2681,
+        16438
+      ]
+    ],
+    "top1_accuracy": 0.8896659707724426,
+    "top1_accuracy_labelled": 0.8909214446244708,
+    "labelled_fraction": 0.9985908141962422,
+    "candidate_miss_rate": 0.002139874739039649,
+    "route_continuity": 0.9369190600522194,
+    "n_observations": 19160
+  }
+}

@@ -1,0 +1,7 @@
+Model,Algorithm Family,Key Configuration,CV Macro F1 (mean ± sd),Top-1 Accuracy (student-test),Route continuity (student-test),Student-Test Macro F1,Log Loss (student-test),Inference Time (ms / GPS obs)
+Logistic Regression,Linear / probabilistic,"C=1.0, L2, StandardScaler",0.8952 ± 0.0439,0.8727,0.9324,0.9159,0.1029,0.0013
+K-Nearest Neighbours (distance-weighted),Instance-based,"k=50, distance weights, scaled, 200k train rows",0.8926 ± 0.0433,0.8663,0.9335,0.9178,0.1102,2.4716
+Random Forest,Ensemble (bagging),"300 trees, min_leaf=5, sqrt features",0.9083 ± 0.0443,0.8897,0.9369,0.9330,0.0755,0.0646
+LightGBM (gradient boosting),Boosting,"600 trees, lr=0.05, 63 leaves",0.9002 ± 0.0630,0.8987,0.9420,0.9362,0.0718,0.1050
+Multi-Layer Perceptron,Neural network,"128-64 ReLU, Adam, early stop, 400k rows",0.8874 ± 0.0743,0.8880,0.9389,0.9270,0.0810,0.0077
+LightGBM (Bayesian-tuned),Boosting,"n_estimators=1133, learning_rate=0.0506, num_leaves=175, min_child_samples=11, subsample=0.842, colsample_bytree=0.804, reg_lambda=0.0212",0.9014 ± 0.0608,0.8983,0.9412,0.9346,0.0780,0.1772

@@ -1,0 +1,68 @@
+{
+  "run_id": "knn",
+  "model": "knn",
+  "family": "Instance-based",
+  "tag": "base",
+  "params": {
+    "n_neighbors": 50,
+    "weights": "distance"
+  },
+  "seed": 42,
+  "features": [
+    "dist_m",
+    "dist_rank",
+    "dist_minus_min",
+    "dist_ratio",
+    "n_cands",
+    "dist_prev_m",
+    "dist_next_m",
+    "dist_window_mean",
+    "cos_heading",
+    "abs_heading_diff",
+    "cos_heading_long",
+    "speed_mps",
+    "heading_valid",
+    "arc_len",
+    "proj_frac",
+    "overhang_m",
+    "out_deg_end",
+    "in_deg_start",
+    "has_twin",
+    "dt_prev",
+    "is_fallback"
+  ],
+  "train_rows_used": 200000,
+  "cv_f1_macro_mean": 0.8925552499842688,
+  "cv_f1_macro_std": 0.043292447033449,
+  "cv_top1_mean": 0.7505915355903399,
+  "cv_top1_labelled_mean": 0.8734155716534643,
+  "cv_log_loss_mean": 0.19327465233805236,
+  "cv_train_f1_macro_mean": 1.0,
+  "train_time_s": 0.21835803985595703,
+  "inference_time_s": 47.35673713684082,
+  "inference_ms_per_obs": 2.471645988352861,
+  "student_test": {
+    "accuracy": 0.9633077430454029,
+    "precision_macro": 0.9235778287224994,
+    "recall_macro": 0.9122471278426234,
+    "f1_macro": 0.9178016784633733,
+    "f1_positive": 0.8566418703506907,
+    "log_loss": 0.11015240209697916,
+    "confusion_matrix": [
+      [
+        125543,
+        2399
+      ],
+      [
+        2997,
+        16122
+      ]
+    ],
+    "top1_accuracy": 0.8662839248434238,
+    "top1_accuracy_labelled": 0.8675064025505671,
+    "labelled_fraction": 0.9985908141962422,
+    "candidate_miss_rate": 0.002139874739039649,
+    "route_continuity": 0.9335248041775457,
+    "n_observations": 19160
+  }
+}

@@ -1,0 +1,49 @@
+=== mlp | train rows=776,903 test rows=147,061 | params={'hidden_layer_sizes': (128, 64), 'alpha': 0.0001, 'learning_rate_init': 0.001, 'batch_size': 1024, 'max_iter': 200, 'early_stopping': True, 'n_iter_no_change': 10}
+  fold 0: fold=0, train_rows=400000, fit_s=272.1120, train_f1_macro=0.9437, f1_macro=0.7547, log_loss=0.4547, top1_accuracy=0.3803, top1_accuracy_labelled=0.8876
+  fold 1: fold=1, train_rows=400000, fit_s=312.9875, train_f1_macro=0.9494, f1_macro=0.9151, log_loss=0.1242, top1_accuracy=0.8567, top1_accuracy_labelled=0.8696
+  fold 2: fold=2, train_rows=400000, fit_s=89.5787, train_f1_macro=0.9483, f1_macro=0.9184, log_loss=0.1015, top1_accuracy=0.8470, top1_accuracy_labelled=0.8699
+  fold 3: fold=3, train_rows=400000, fit_s=73.4531, train_f1_macro=0.9432, f1_macro=0.9205, log_loss=0.1049, top1_accuracy=0.8275, top1_accuracy_labelled=0.9029
+  fold 4: fold=4, train_rows=400000, fit_s=199.2054, train_f1_macro=0.9457, f1_macro=0.9282, log_loss=0.1076, top1_accuracy=0.8866, top1_accuracy_labelled=0.8911
+{
+  "run_id": "mlp",
+  "model": "mlp",
+  "family": "Neural network",
+  "tag": "base",
+  "params": {
+    "hidden_layer_sizes": [
+      128,
+      64
+    ],
+    "alpha": 0.0001,
+    "learning_rate_init": 0.001,
+    "batch_size": 1024,
+    "max_iter": 200,
+    "early_stopping": true,
+    "n_iter_no_change": 10
+  },
+  "seed": 42,
+  "train_rows_used": 400000,
+  "cv_f1_macro_mean": 0.8873754651173433,
+  "cv_f1_macro_std": 0.07430359578358293,
+  "cv_top1_mean": 0.7596152723816466,
+  "cv_top1_labelled_mean": 0.884206657646583,
+  "cv_log_loss_mean": 0.17857338521869898,
+  "cv_train_f1_macro_mean": 0.9460380418142904,
+  "train_time_s": 186.09346270561218,
+  "inference_time_s": 0.14730191230773926,
+  "inference_ms_per_obs": 0.007687991247794325
+}
+student_test: {
+  "accuracy": 0.9679316746112158,
+  "precision_macro": 0.9405696174266005,
+  "recall_macro": 0.9145041904591835,
+  "f1_macro": 0.9269710625565375,
+  "f1_positive": 0.8722781930451738,
+  "log_loss": 0.08096824586391449,
+  "top1_accuracy": 0.8880480167014614,
+  "top1_accuracy_labelled": 0.8893012073381069,
+  "labelled_fraction": 0.9985908141962422,
+  "candidate_miss_rate": 0.002139874739039649,
+  "route_continuity": 0.9389033942558747,
+  "n_observations": 19160
+}

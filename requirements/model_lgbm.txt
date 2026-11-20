@@ -1,0 +1,2 @@
+-r base.txt
+lightgbm==4.7.0

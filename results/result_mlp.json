@@ -1,0 +1,76 @@
+{
+  "run_id": "mlp",
+  "model": "mlp",
+  "family": "Neural network",
+  "tag": "base",
+  "params": {
+    "hidden_layer_sizes": [
+      128,
+      64
+    ],
+    "alpha": 0.0001,
+    "learning_rate_init": 0.001,
+    "batch_size": 1024,
+    "max_iter": 200,
+    "early_stopping": true,
+    "n_iter_no_change": 10
+  },
+  "seed": 42,
+  "features": [
+    "dist_m",
+    "dist_rank",
+    "dist_minus_min",
+    "dist_ratio",
+    "n_cands",
+    "dist_prev_m",
+    "dist_next_m",
+    "dist_window_mean",
+    "cos_heading",
+    "abs_heading_diff",
+    "cos_heading_long",
+    "speed_mps",
+    "heading_valid",
+    "arc_len",
+    "proj_frac",
+    "overhang_m",
+    "out_deg_end",
+    "in_deg_start",
+    "has_twin",
+    "dt_prev",
+    "is_fallback"
+  ],
+  "train_rows_used": 400000,
+  "cv_f1_macro_mean": 0.8873754651173433,
+  "cv_f1_macro_std": 0.07430359578358293,
+  "cv_top1_mean": 0.7596152723816466,
+  "cv_top1_labelled_mean": 0.884206657646583,
+  "cv_log_loss_mean": 0.17857338521869898,
+  "cv_train_f1_macro_mean": 0.9460380418142904,
+  "train_time_s": 186.09346270561218,
+  "inference_time_s": 0.14730191230773926,
+  "inference_ms_per_obs": 0.007687991247794325,
+  "student_test": {
+    "accuracy": 0.9679316746112158,
+    "precision_macro": 0.9405696174266005,
+    "recall_macro": 0.9145041904591835,
+    "f1_macro": 0.9269710625565375,
+    "f1_positive": 0.8722781930451738,
+    "log_loss": 0.08096824586391449,
+    "confusion_matrix": [
+      [
+        126241,
+        1701
+      ],
+      [
+        3015,
+        16104
+      ]
+    ],
+    "top1_accuracy": 0.8880480167014614,
+    "top1_accuracy_labelled": 0.8893012073381069,
+    "labelled_fraction": 0.9985908141962422,
+    "candidate_miss_rate": 0.002139874739039649,
+    "route_continuity": 0.9389033942558747,
+    "n_observations": 19160
+  }
+}

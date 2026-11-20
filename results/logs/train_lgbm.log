@@ -1,0 +1,47 @@
+=== lgbm | train rows=776,903 test rows=147,061 | params={'n_estimators': 600, 'learning_rate': 0.05, 'num_leaves': 63, 'min_child_samples': 50, 'subsample': 0.8, 'subsample_freq': 1, 'colsample_bytree': 0.8, 'reg_lambda': 1.0}
+  fold 0: fold=0, train_rows=603190, fit_s=30.9314, train_f1_macro=0.9655, f1_macro=0.7885, log_loss=0.2624, top1_accuracy=0.4019, top1_accuracy_labelled=0.9000
+  fold 1: fold=1, train_rows=503110, fit_s=25.9312, train_f1_macro=0.9692, f1_macro=0.9183, log_loss=0.1078, top1_accuracy=0.8650, top1_accuracy_labelled=0.8759
+  fold 2: fold=2, train_rows=505955, fit_s=32.9627, train_f1_macro=0.9718, f1_macro=0.9224, log_loss=0.0899, top1_accuracy=0.8516, top1_accuracy_labelled=0.8746
+  fold 3: fold=3, train_rows=510849, fit_s=21.2767, train_f1_macro=0.9644, f1_macro=0.9373, log_loss=0.0677, top1_accuracy=0.8337, top1_accuracy_labelled=0.9097
+  fold 4: fold=4, train_rows=503048, fit_s=26.8007, train_f1_macro=0.9660, f1_macro=0.9344, log_loss=0.0860, top1_accuracy=0.8928, top1_accuracy_labelled=0.8972
+{
+  "run_id": "lgbm",
+  "model": "lgbm",
+  "family": "Boosting",
+  "tag": "base",
+  "params": {
+    "n_estimators": 600,
+    "learning_rate": 0.05,
+    "num_leaves": 63,
+    "min_child_samples": 50,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0
+  },
+  "seed": 42,
+  "train_rows_used": 656538,
+  "cv_f1_macro_mean": 0.9001737092097126,
+  "cv_f1_macro_std": 0.06295347788502761,
+  "cv_top1_mean": 0.7690107402873436,
+  "cv_top1_labelled_mean": 0.8914995343832921,
+  "cv_log_loss_mean": 0.12276701336617535,
+  "cv_train_f1_macro_mean": 0.9673692966920955,
+  "train_time_s": 30.300307989120483,
+  "inference_time_s": 2.0116448402404785,
+  "inference_ms_per_obs": 0.10499190189146547
+}
+student_test: {
+  "accuracy": 0.9716376197632275,
+  "precision_macro": 0.9442224341959997,
+  "recall_macro": 0.9285568321795064,
+  "f1_macro": 0.9361887160037397,
+  "f1_positive": 0.8886278070011482,
+  "log_loss": 0.07178875858470872,
+  "top1_accuracy": 0.8986951983298539,
+  "top1_accuracy_labelled": 0.8999634139967595,
+  "labelled_fraction": 0.9985908141962422,
+  "candidate_miss_rate": 0.002139874739039649,
+  "route_continuity": 0.9420365535248042,
+  "n_observations": 19160
+}

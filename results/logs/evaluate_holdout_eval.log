@@ -1,0 +1,8 @@
+[eval] 10 trips, 19,674 observations, 146,838 candidate rows, features in 4.0s
+  logreg      top1=0.8890 -> HMM 0.9159  F1=0.9278 logloss=0.0934 cont=0.9349 -> 0.9681
+  knn         top1=0.8876 -> HMM 0.9076  F1=0.9272 logloss=0.0980 cont=0.9344 -> 0.9695
+  rf          top1=0.8984 -> HMM 0.9197  F1=0.9383 logloss=0.0750 cont=0.9380 -> 0.9717
+  lgbm        top1=0.8922 -> HMM 0.9189  F1=0.9359 logloss=0.0737 cont=0.9427 -> 0.9714
+  mlp         top1=0.8867 -> HMM 0.9136  F1=0.9295 logloss=0.0796 cont=0.9435 -> 0.9710
+  lgbm_tuned  top1=0.8892 -> HMM 0.9166  F1=0.9332 logloss=0.0779 cont=0.9422 -> 0.9709
+-> C:\Users\shiro\Downloads\ML hackathon\pathsnap\results\evaluator_test

@@ -1,0 +1,74 @@
+{
+  "run_id": "lgbm",
+  "model": "lgbm",
+  "family": "Boosting",
+  "tag": "base",
+  "params": {
+    "n_estimators": 600,
+    "learning_rate": 0.05,
+    "num_leaves": 63,
+    "min_child_samples": 50,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0
+  },
+  "seed": 42,
+  "features": [
+    "dist_m",
+    "dist_rank",
+    "dist_minus_min",
+    "dist_ratio",
+    "n_cands",
+    "dist_prev_m",
+    "dist_next_m",
+    "dist_window_mean",
+    "cos_heading",
+    "abs_heading_diff",
+    "cos_heading_long",
+    "speed_mps",
+    "heading_valid",
+    "arc_len",
+    "proj_frac",
+    "overhang_m",
+    "out_deg_end",
+    "in_deg_start",
+    "has_twin",
+    "dt_prev",
+    "is_fallback"
+  ],
+  "train_rows_used": 656538,
+  "cv_f1_macro_mean": 0.9001737092097126,
+  "cv_f1_macro_std": 0.06295347788502761,
+  "cv_top1_mean": 0.7690107402873436,
+  "cv_top1_labelled_mean": 0.8914995343832921,
+  "cv_log_loss_mean": 0.12276701336617535,
+  "cv_train_f1_macro_mean": 0.9673692966920955,
+  "train_time_s": 30.300307989120483,
+  "inference_time_s": 2.0116448402404785,
+  "inference_ms_per_obs": 0.10499190189146547,
+  "student_test": {
+    "accuracy": 0.9716376197632275,
+    "precision_macro": 0.9442224341959997,
+    "recall_macro": 0.9285568321795064,
+    "f1_macro": 0.9361887160037397,
+    "f1_positive": 0.8886278070011482,
+    "log_loss": 0.07178875858470872,
+    "confusion_matrix": [
+      [
+        126250,
+        1692
+      ],
+      [
+        2479,
+        16640
+      ]
+    ],
+    "top1_accuracy": 0.8986951983298539,
+    "top1_accuracy_labelled": 0.8999634139967595,
+    "labelled_fraction": 0.9985908141962422,
+    "candidate_miss_rate": 0.002139874739039649,
+    "route_continuity": 0.9420365535248042,
+    "n_observations": 19160
+  }
+}

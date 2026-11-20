@@ -1,0 +1,11 @@
+{
+  "partition": "eval",
+  "hmm_config": {
+    "beta": 20.0,
+    "emission_weight": 2.0,
+    "selected_on": "student_test mean top1 accuracy"
+  },
+  "final_model": "lgbm",
+  "n_trips": 10,
+  "note": "frozen models, no refit/tuning on this partition"
+}

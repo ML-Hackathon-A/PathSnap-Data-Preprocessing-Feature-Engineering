@@ -1,0 +1,12 @@
+2026-11-18 16:43:50,982 INFO Loaded final model and HMM config {'beta': 20.0, 'emission_weight': 2.0, 'selected_on': 'student_test mean top1 accuracy'}; trips dir = C:\Users\shiro\Downloads\ML hackathon\pathsnap\data\student_test
+INFO:     Started server process [16476]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50963 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50995 - "GET /trips HTTP/1.1" 200 OK
+2026-11-18 16:43:55,756 INFO REQUEST /predict trip_id=00000076
+2026-11-18 16:43:57,414 INFO RESULT trip=00000076 top1(clf)=0.9024 top1(hmm)=0.9401 continuity(hmm)=0.9542 time=1.66s
+INFO:     127.0.0.1:50996 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51003 - "GET /trips HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51010 - "GET /trips HTTP/1.1" 200 OK

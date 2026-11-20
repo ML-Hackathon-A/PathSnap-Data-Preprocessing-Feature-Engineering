@@ -1,0 +1,41 @@
+=== logreg | train rows=776,903 test rows=147,061 | params={'C': 1.0, 'max_iter': 2000}
+  fold 0: fold=0, train_rows=603190, fit_s=2.4954, train_f1_macro=0.9202, f1_macro=0.8174, log_loss=0.4318, top1_accuracy=0.3767, top1_accuracy_labelled=0.8791
+  fold 1: fold=1, train_rows=503110, fit_s=2.0440, train_f1_macro=0.9240, f1_macro=0.9066, log_loss=0.1354, top1_accuracy=0.8549, top1_accuracy_labelled=0.8614
+  fold 2: fold=2, train_rows=505955, fit_s=2.1073, train_f1_macro=0.9229, f1_macro=0.9111, log_loss=0.1218, top1_accuracy=0.8418, top1_accuracy_labelled=0.8645
+  fold 3: fold=3, train_rows=510849, fit_s=1.7703, train_f1_macro=0.9166, f1_macro=0.9188, log_loss=0.0983, top1_accuracy=0.8310, top1_accuracy_labelled=0.9067
+  fold 4: fold=4, train_rows=503048, fit_s=2.2119, train_f1_macro=0.9184, f1_macro=0.9222, log_loss=0.1156, top1_accuracy=0.8827, top1_accuracy_labelled=0.8887
+{
+  "run_id": "logreg",
+  "model": "logreg",
+  "family": "Linear / probabilistic",
+  "tag": "base",
+  "params": {
+    "C": 1.0,
+    "max_iter": 2000
+  },
+  "seed": 42,
+  "train_rows_used": 656538,
+  "cv_f1_macro_mean": 0.8952202592032608,
+  "cv_f1_macro_std": 0.04392344541197947,
+  "cv_top1_mean": 0.7574341457300522,
+  "cv_top1_labelled_mean": 0.8800717428609681,
+  "cv_log_loss_mean": 0.18059882960119206,
+  "cv_train_f1_macro_mean": 0.9204411566383595,
+  "train_time_s": 2.5633740425109863,
+  "inference_time_s": 0.024991750717163086,
+  "inference_ms_per_obs": 0.0013043711230252132
+}
+student_test: {
+  "accuracy": 0.9615125696139697,
+  "precision_macro": 0.9110814828727463,
+  "recall_macro": 0.9209805151841954,
+  "f1_macro": 0.915944741148015,
+  "f1_positive": 0.8540560053633128,
+  "log_loss": 0.10294792056083679,
+  "top1_accuracy": 0.872651356993737,
+  "top1_accuracy_labelled": 0.8738828202581926,
+  "labelled_fraction": 0.9985908141962422,
+  "candidate_miss_rate": 0.002139874739039649,
+  "route_continuity": 0.9323759791122715,
+  "n_observations": 19160
+}

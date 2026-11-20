@@ -1,0 +1,43 @@
+=== rf | train rows=776,903 test rows=147,061 | params={'n_estimators': 300, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': None}
+  fold 0: fold=0, train_rows=603190, fit_s=191.1374, train_f1_macro=0.9680, f1_macro=0.8307, log_loss=0.1940, top1_accuracy=0.3820, top1_accuracy_labelled=0.8912
+  fold 1: fold=1, train_rows=503110, fit_s=140.6592, train_f1_macro=0.9692, f1_macro=0.9188, log_loss=0.1027, top1_accuracy=0.8598, top1_accuracy_labelled=0.8707
+  fold 2: fold=2, train_rows=505955, fit_s=143.4573, train_f1_macro=0.9707, f1_macro=0.9187, log_loss=0.0921, top1_accuracy=0.8451, top1_accuracy_labelled=0.8679
+  fold 3: fold=3, train_rows=510849, fit_s=134.9885, train_f1_macro=0.9661, f1_macro=0.9398, log_loss=0.0683, top1_accuracy=0.8316, top1_accuracy_labelled=0.9074
+  fold 4: fold=4, train_rows=503048, fit_s=132.0345, train_f1_macro=0.9659, f1_macro=0.9334, log_loss=0.0872, top1_accuracy=0.8893, top1_accuracy_labelled=0.8935
+{
+  "run_id": "rf",
+  "model": "rf",
+  "family": "Ensemble (bagging)",
+  "tag": "base",
+  "params": {
+    "n_estimators": 300,
+    "min_samples_leaf": 5,
+    "max_features": "sqrt",
+    "max_depth": null
+  },
+  "seed": 42,
+  "train_rows_used": 656538,
+  "cv_f1_macro_mean": 0.9082861076162914,
+  "cv_f1_macro_std": 0.04433084914032911,
+  "cv_top1_mean": 0.7615603129695829,
+  "cv_top1_labelled_mean": 0.8861488089435776,
+  "cv_log_loss_mean": 0.10887651467199914,
+  "cv_train_f1_macro_mean": 0.9679974696983036,
+  "train_time_s": 182.47468423843384,
+  "inference_time_s": 1.2382407188415527,
+  "inference_ms_per_obs": 0.06462634231949649
+}
+student_test: {
+  "accuracy": 0.970352438783906,
+  "precision_macro": 0.9432663202669982,
+  "recall_macro": 0.9233249333799471,
+  "f1_macro": 0.9329682517884548,
+  "f1_positive": 0.882909012783328,
+  "log_loss": 0.07552430125257391,
+  "top1_accuracy": 0.8896659707724426,
+  "top1_accuracy_labelled": 0.8909214446244708,
+  "labelled_fraction": 0.9985908141962422,
+  "candidate_miss_rate": 0.002139874739039649,
+  "route_continuity": 0.9369190600522194,
+  "n_observations": 19160
+}

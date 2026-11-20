@@ -1,0 +1,68 @@
+{
+  "run_id": "logreg",
+  "model": "logreg",
+  "family": "Linear / probabilistic",
+  "tag": "base",
+  "params": {
+    "C": 1.0,
+    "max_iter": 2000
+  },
+  "seed": 42,
+  "features": [
+    "dist_m",
+    "dist_rank",
+    "dist_minus_min",
+    "dist_ratio",
+    "n_cands",
+    "dist_prev_m",
+    "dist_next_m",
+    "dist_window_mean",
+    "cos_heading",
+    "abs_heading_diff",
+    "cos_heading_long",
+    "speed_mps",
+    "heading_valid",
+    "arc_len",
+    "proj_frac",
+    "overhang_m",
+    "out_deg_end",
+    "in_deg_start",
+    "has_twin",
+    "dt_prev",
+    "is_fallback"
+  ],
+  "train_rows_used": 656538,
+  "cv_f1_macro_mean": 0.8952202592032608,
+  "cv_f1_macro_std": 0.04392344541197947,
+  "cv_top1_mean": 0.7574341457300522,
+  "cv_top1_labelled_mean": 0.8800717428609681,
+  "cv_log_loss_mean": 0.18059882960119206,
+  "cv_train_f1_macro_mean": 0.9204411566383595,
+  "train_time_s": 2.5633740425109863,
+  "inference_time_s": 0.024991750717163086,
+  "inference_ms_per_obs": 0.0013043711230252132,
+  "student_test": {
+    "accuracy": 0.9615125696139697,
+    "precision_macro": 0.9110814828727463,
+    "recall_macro": 0.9209805151841954,
+    "f1_macro": 0.915944741148015,
+    "f1_positive": 0.8540560053633128,
+    "log_loss": 0.10294792056083679,
+    "confusion_matrix": [
+      [
+        124840,
+        3102
+      ],
+      [
+        2558,
+        16561
+      ]
+    ],
+    "top1_accuracy": 0.872651356993737,
+    "top1_accuracy_labelled": 0.8738828202581926,
+    "labelled_fraction": 0.9985908141962422,
+    "candidate_miss_rate": 0.002139874739039649,
+    "route_continuity": 0.9323759791122715,
+    "n_observations": 19160
+  }
+}

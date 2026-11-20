@@ -1,0 +1,18 @@
+# environments and local settings (never commit)
+envs/
+.venv/
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+report/.edge_profile/
+
+# datasets and anything derived from / containing them
+data/
+features/
+dist/
+results/*.pkl
+
+# Random Forest model is 394 MB (> GitHub's 100 MB limit); retrain with:
+#   envs\rf\Scripts\python.exe -m src.train_model --model rf
+artifacts/models/rf.joblib

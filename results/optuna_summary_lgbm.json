@@ -1,0 +1,15 @@
+{
+  "model": "lgbm",
+  "n_trials": 25,
+  "best_cv_top1": 0.8897615332548486,
+  "best_raw_params": {
+    "n_estimators": 1133,
+    "learning_rate": 0.05060887189415562,
+    "num_leaves": 175,
+    "min_child_samples": 11,
+    "subsample": 0.8418223062860066,
+    "colsample_bytree": 0.8043435976594345,
+    "reg_lambda": 0.021188885344395475
+  },
+  "search_seconds": 2418.88653922081
+}

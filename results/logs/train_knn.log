@@ -1,0 +1,41 @@
+=== knn | train rows=776,903 test rows=147,061 | params={'n_neighbors': 50, 'weights': 'distance'}
+  fold 0: fold=0, train_rows=200000, fit_s=0.1855, train_f1_macro=1.0000, f1_macro=0.8157, log_loss=0.4168, top1_accuracy=0.3755, top1_accuracy_labelled=0.8756
+  fold 1: fold=1, train_rows=200000, fit_s=0.1437, train_f1_macro=1.0000, f1_macro=0.9080, log_loss=0.1701, top1_accuracy=0.8475, top1_accuracy_labelled=0.8592
+  fold 2: fold=2, train_rows=200000, fit_s=0.1355, train_f1_macro=1.0000, f1_macro=0.9055, log_loss=0.1296, top1_accuracy=0.8367, top1_accuracy_labelled=0.8597
+  fold 3: fold=3, train_rows=200000, fit_s=0.1419, train_f1_macro=1.0000, f1_macro=0.9152, log_loss=0.1099, top1_accuracy=0.8187, top1_accuracy_labelled=0.8933
+  fold 4: fold=4, train_rows=200000, fit_s=0.1606, train_f1_macro=1.0000, f1_macro=0.9184, log_loss=0.1400, top1_accuracy=0.8745, top1_accuracy_labelled=0.8792
+{
+  "run_id": "knn",
+  "model": "knn",
+  "family": "Instance-based",
+  "tag": "base",
+  "params": {
+    "n_neighbors": 50,
+    "weights": "distance"
+  },
+  "seed": 42,
+  "train_rows_used": 200000,
+  "cv_f1_macro_mean": 0.8925552499842688,
+  "cv_f1_macro_std": 0.043292447033449,
+  "cv_top1_mean": 0.7505915355903399,
+  "cv_top1_labelled_mean": 0.8734155716534643,
+  "cv_log_loss_mean": 0.19327465233805236,
+  "cv_train_f1_macro_mean": 1.0,
+  "train_time_s": 0.21835803985595703,
+  "inference_time_s": 47.35673713684082,
+  "inference_ms_per_obs": 2.471645988352861
+}
+student_test: {
+  "accuracy": 0.9633077430454029,
+  "precision_macro": 0.9235778287224994,
+  "recall_macro": 0.9122471278426234,
+  "f1_macro": 0.9178016784633733,
+  "f1_positive": 0.8566418703506907,
+  "log_loss": 0.11015240209697916,
+  "top1_accuracy": 0.8662839248434238,
+  "top1_accuracy_labelled": 0.8675064025505671,
+  "labelled_fraction": 0.9985908141962422,
+  "candidate_miss_rate": 0.002139874739039649,
+  "route_continuity": 0.9335248041775457,
+  "n_observations": 19160
+}

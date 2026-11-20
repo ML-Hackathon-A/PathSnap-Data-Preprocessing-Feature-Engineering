@@ -1,0 +1,5 @@
+              trips     gps           km    nodes     arcs  missing  gaps10  route_disc
+partition                                                                              
+student_test     10   19160   296.973123    90689   185041        0      27           1
+train            80  208417  2978.522944  1933485  3876904        0     590          13
+EDA outputs -> C:\Users\shiro\Downloads\ML hackathon\pathsnap\results\eda C:\Users\shiro\Downloads\ML hackathon\pathsnap\results\plots
