@@ -4,6 +4,14 @@ UE24CS352A Machine Learning hackathon (PES University). Noisy 1 Hz GPS traces ar
 road network: candidate generation, then a per-candidate classifier (5 models compared, the best tuned
 with Optuna), then HMM/Viterbi route decoding, a FastAPI backend (Laptop 1) and a Streamlit UI (Laptop 2).
 
+## Team
+
+The work was split across three people:
+
+- Akshath Girish Shirolkar
+- Akshath Patil
+- Aditya Jaiswal
+
 ## Folder layout
 
 | Folder | Contents |
