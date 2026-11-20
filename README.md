@@ -4,21 +4,6 @@ UE24CS352A Machine Learning hackathon (PES University). Noisy 1 Hz GPS traces ar
 road network: candidate generation, then a per-candidate classifier (5 models compared, the best tuned
 with Optuna), then HMM/Viterbi route decoding, a FastAPI backend (Laptop 1) and a Streamlit UI (Laptop 2).
 
-## Team
-
-The work was split equally across three people. Every stage of the project was divided, so each
-member contributed to preprocessing, feature engineering, modelling, optimisation, deployment and
-documentation.
-
-| Stage | Akshath Girish Shirolkar | Akshath Patil | Aditya Jaiswal |
-|---|---|---|---|
-| Data preprocessing | Raw-data validation notebook: missing values, invalid coordinates/ids, duplicates (`notebooks/01_data_preprocessing.ipynb`) | Timestamp and route-connectivity checks, cleaning rules in the pipeline (`src/data_io.py`) | Exploratory data analysis: trip inventory, distributions, trajectory and network plots (`src/eda.py`) |
-| Feature engineering | Local metric projection, road-network model and KD-tree spatial index (`src/geo.py`) | Candidate generation and monotonic DP label alignment with the reference route (`src/features.py`) | The 21 per-candidate features and the dataset builder (`src/features.py`, `src/build_dataset.py`) |
-| Model training (5 models) | Logistic Regression and KNN | Random Forest and MLP | LightGBM, evaluation metrics and model comparison (`src/metrics.py`, `src/compare_models.py`) |
-| Optimisation and decoding | Bayesian hyperparameter optimisation with Optuna (`src/tune.py`) | HMM / Viterbi route reconstruction (`src/hmm.py`) | Decoder parameter tuning and final evaluator-test evaluation (`src/tune_decoder.py`, `src/evaluate_holdout.py`) |
-| Deployment | FastAPI backend and inference pipeline (`api/main.py`, `src/pipeline.py`) | Streamlit evaluator UI (`ui/app.py`) | Two-laptop start scripts, packaging and dependency setup (`start_*.ps1`, `tools/`, `requirements/`) |
-| Visualisation and documentation | Technical report sections 2-3 (EDA, model comparison) | Technical report sections 4-5 (optimisation, HMM) | Folium maps, report sections 6-7, README and viva guide (`src/make_map.py`, `report/`) |
-
 ## Folder layout
 
 | Folder | Contents |
@@ -87,3 +72,11 @@ only on the server, after prediction, to compute accuracy; they are never return
 
 Evaluator-test data is not used for training, tuning, feature selection or thresholds. There are no
 hard-coded predictions. AI assistance was used in development (see report section 8).
+
+## Team Contributions
+
+| Name | Contributions |
+|---|---|
+| Akshath Girish Shirolkar | **Data preprocessing:** raw-data validation notebook covering missing values, invalid coordinates and ids, and duplicate GPS rows (`notebooks/01_data_preprocessing.ipynb`).<br>**Feature engineering:** local metric projection, road-network model and KD-tree spatial index for candidate search (`src/geo.py`).<br>**Models:** trained and evaluated Logistic Regression and KNN.<br>**Optimisation:** Bayesian hyperparameter optimisation of LightGBM with Optuna TPE (`src/tune.py`).<br>**Deployment:** FastAPI backend and end-to-end inference pipeline (`api/main.py`, `src/pipeline.py`).<br>**Documentation:** technical report sections 2-3 (EDA, model comparison). |
+| Akshath Patil | **Data preprocessing:** timestamp-ordering and route-connectivity checks; cleaning rules in the pipeline (`src/data_io.py`).<br>**Feature engineering:** candidate generation within 50 m and the monotonic dynamic-programming alignment of GPS points to the reference route that produces the labels (`src/features.py`).<br>**Models:** trained and evaluated Random Forest and the MLP neural network.<br>**Route reconstruction:** HMM / Viterbi decoder with directed shortest-path transitions (`src/hmm.py`).<br>**Deployment:** Streamlit evaluator UI (`ui/app.py`).<br>**Documentation:** technical report sections 4-5 (Bayesian optimisation, HMM). |
+| Aditya Jaiswal | **Data preprocessing:** exploratory data analysis covering trip inventory, sampling-interval and trip-length distributions, and trajectory and road-network plots (`src/eda.py`).<br>**Feature engineering:** the 21 per-candidate features and the dataset builder (`src/features.py`, `src/build_dataset.py`).<br>**Models:** trained and evaluated LightGBM; evaluation metrics and the model-comparison table and plots (`src/metrics.py`, `src/compare_models.py`).<br>**Evaluation:** HMM decoder parameter tuning and the final evaluator-test evaluation (`src/tune_decoder.py`, `src/evaluate_holdout.py`).<br>**Deployment:** two-laptop start scripts, packaging and dependency setup (`start_*.ps1`, `tools/`, `requirements/`).<br>**Documentation:** Folium maps, technical report sections 6-7, README and viva guide (`src/make_map.py`, `report/`). |
